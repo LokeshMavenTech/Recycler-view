@@ -62,23 +62,25 @@ public class RecyclerContactAdapter extends RecyclerView.Adapter<RecyclerContact
                     Dialog dialog = new Dialog(context);
                     dialog.setContentView(R.layout.add_update);
                     EditText edtName = dialog.findViewById(R.id.edtName);
-                    EditText edtNumber= dialog.findViewById(R.id.txtNumber);
+                    EditText edtNumber= dialog.findViewById(R.id.edtNumber);
                     Button btnAction= dialog.findViewById(R.id.btnAction);
-                    TextView txtTitel = dialog.findViewById(R.id.txtTitel);
 
+                    TextView txtTitel = dialog.findViewById(R.id.txtTitel);
                     txtTitel.setText("Update Contact");
                     btnAction.setText("Update");
                   edtName.setText(arrContacts.get(getAdapterPosition()).name);
-                 //  edtNumber.setText(arrContacts.get(getAdapterPosition()).number);
+                  edtNumber.setText(arrContacts.get(getAdapterPosition()).number);
 
 
                     btnAction.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+
                             String name = "", number = "";
                             if (!edtName.getText().toString().equals("")) {
                                 name = edtName.getText().toString();
-                            } else {
+                            }
+                            else {
                                 Toast.makeText(context, "Please Enter Name", Toast.LENGTH_SHORT).show();
                             }
 

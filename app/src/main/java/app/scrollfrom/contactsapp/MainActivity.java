@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 Dialog dialog = new Dialog(MainActivity.this);
                 dialog.setContentView(R.layout.add_update);
                 EditText edtName = dialog.findViewById(R.id.edtName);
-                EditText edtNumber= dialog.findViewById(R.id.txtNumber);
+                EditText edtNumber= dialog.findViewById(R.id.edtNumber);
                 Button btnAction= dialog.findViewById(R.id.btnAction);
 
                 btnAction.setOnClickListener(new View.OnClickListener() {
